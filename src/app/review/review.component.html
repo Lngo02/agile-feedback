@@ -1,0 +1,94 @@
+<app-nav-bar></app-nav-bar>
+<div class="page-div center">
+  <p>
+    As part of every retrospective we ask that each team member fills out a review for everyone else on the team. This includes peers, team leads, and amanagers. If you would like to submit a review for someone outside of the team, you can add them at the end of the srvey THese surveys are completely anonymous and the feedback will be collected yb a manager, summarized and given back to the employee. As a reminder, this is a polot program so if you have any feedback, please leave it in the website feedback protal.
+  </p>
+  <mat-card class="center">
+    <!-- Select Team Member -->
+    <div id="selectTeamMember" class="form-div">
+      <h4>Select Team Member:</h4>
+      <mat-form-field>
+          <mat-label>Choose one</mat-label>
+          <mat-select [formControl]="selected" [errorStateMatcher]="matcher">
+            <mat-option *ngFor="let peer of peers" [value]="peer.reviewed" (click)="updateSelected(peer.name)">
+              {{peer.name}}
+            </mat-option>
+          </mat-select>
+          <mat-hint>You haven't reviewed this peer yet</mat-hint>
+          <mat-error *ngIf="selected.hasError('pattern') && !selected.hasError('required')">You already reviewed this peer
+          </mat-error>
+      </mat-form-field>
+    </div>
+
+    <!-- Helpfulness -->
+    <div id="helpfulnessRating" class="form-div">
+      <h4>Was this persom helpful in the last 2 sprints?</h4>
+      <mat-radio-group [(ngModel)]="helpfulRating" class="radio-group">
+        <mat-radio-button *ngFor="let rating of ratings" [value]="rating" class="radio-button">
+          {{rating}}
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <!-- Openness -->
+    <div id="openessRating" class="form-div">
+      <h4>Was this person open to changes, feedback and assistance in the last 2 sprints?</h4>
+      <mat-radio-group [(ngModel)]="openRating" class="radio-group">
+        <mat-radio-button *ngFor="let rating of ratings" [value]="rating" class="radio-button">
+          {{rating}}
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <!-- Reliableness -->
+    <div id="reliableRating" class="form-div">
+      <h4>Was this person reliable in the last 2 sprints and met their commitments?</h4>
+      <mat-radio-group [(ngModel)]="reliableRating" class="radio-group">
+        <mat-radio-button *ngFor="let rating of ratings" [value]="rating" class="radio-button">
+          {{rating}}
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <!-- Courage -->
+    <div id="courageRating" class="form-div">
+      <h4>Was the person courageous in suggesting new ideas, challenging the thought process, providing feedback and helping the team grow in the last 2 sprints?</h4>
+      <mat-radio-group [(ngModel)]="courageRating" class="radio-group">
+        <mat-radio-button *ngFor="let rating of ratings" [value]="rating" class="radio-button">
+          {{rating}}
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <!-- Teach -->
+    <div id="techRating" class="form-div">
+      <h4>Did this person have the technical skills to meet their commitments and did they deliver the expected qualty in the last 2 sprints?</h4>
+      <mat-radio-group [(ngModel)]="techRating" class="radio-group">
+        <mat-radio-button *ngFor="let rating of ratings" [value]="rating" class="radio-button">
+          {{rating}}
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div id="commments" class="form-div">
+      <h4>Comments (optional):</h4>
+      <mat-form-field style="width:100%;">
+        <textarea matInput placehoder="Comments"></textarea>
+      </mat-form-field>
+    </div>
+
+    <!-- Summary -->
+    <!--<h4>Summary Rating for {{selectedPeer}}</h4>
+    <p>Helpful: {{helpfulRating}} </p>
+    <p>Open: {{openRating}} </p>
+    <p>Reliable: {{reliableRating}} </p>
+    <p>Courage: {{courageRating}} </p>
+    <p>Tech: {{techRating}} </p>-->
+
+    <div class="nav-button-group">
+      <button mat-raised-button color="basic" class="nav-button">Back</button>
+      <button mat-raised-button color="primary" class="nav-button">Next Team Member</button>
+    </div>
+  </mat-card>
+
+</div> 

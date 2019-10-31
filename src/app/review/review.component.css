@@ -1,0 +1,37 @@
+.form-div {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.form-div + .form-div {
+  margin-top: 40px;
+}
+
+mat-radio-button {
+  margin-right: 20px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.radio-button {
+  margin: 5px;
+}
+
+.nav-button {
+  width: 150px;
+}
+
+.nav-button + .nav-button {
+  margin-left: 150px;
+}
+
+.nav-button-group {
+  margin: 0 auto;
+  display: table;
+  padding-top: 80px;
+  padding-bottom: 20px;
+}

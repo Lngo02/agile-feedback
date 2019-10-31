@@ -1,0 +1,14 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span class="title">{{title}}</span>
+    <span class="spacer"></span>
+    <a mat-raised-button routerLink="/login">Logout</a>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<nav style="margin-top: 20px;">
+  <a mat-button routerLink="/dashboard" class="nav-button"><fa-icon [icon]="home" class="icon"></fa-icon>Home</a>
+  <a mat-button routerLink="/reviews" class="nav-button"><fa-icon [icon]="edit" class="icon"></fa-icon>Reviews</a>
+  <a mat-button routerLink="/past-reviews" class="nav-button"><fa-icon [icon]="history" class="icon"></fa-icon>My Past Reviews</a>
+  <a mat-button routerLink="/website-feedback" class="nav-button"><fa-icon [icon]="wrench" class="icon"></fa-icon>Website Feedback</a>
+</nav>

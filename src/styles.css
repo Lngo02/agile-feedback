@@ -1,0 +1,58 @@
+/* Add application styles & imports to this file! */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import '~ngx-bar-rating/themes/br-default-theme.css';
+
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.center {
+  margin:0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.page-div {
+  width: 80%;
+  margin-top:30px;
+}
+
+h4 + mat-form-field {
+  margin-top: -20px;
+}
+
+.button-group {
+  margin: 0 auto;
+  display: table;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

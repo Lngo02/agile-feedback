@@ -1,0 +1,29 @@
+<app-nav-bar></app-nav-bar>
+<div class="page-div center">
+  <mat-card class="center">
+    <mat-card-header>
+      <mat-card-title>Website Feedback</mat-card-title>
+      <mat-card-subtitle>This website is part of a polot program to implement 360 Agile Feedback. If you ave any comments about the web portal or the program you can leave them here. The feedback given here is not anonymous and will go directly to the development team.</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content id="feedback-input">
+      <section>
+        <p>Website Quality</p>
+        <bar-rating [(rate)]="websiteRating" [max]="5"></bar-rating>
+        <p>Program Feedback</p>
+        <bar-rating [(rate)]="programRating" [max]="5"></bar-rating>
+      </section>
+
+      <div id="commments" class="form-div">
+        <h4>Comments (optional):</h4>
+        <mat-form-field style="width:100%;">
+          <textarea matInput placehoder="Comments"></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="button-group">
+        <button mat-raised-button color="primary">Submit</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  
+</div>

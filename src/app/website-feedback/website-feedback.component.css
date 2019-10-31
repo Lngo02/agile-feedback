@@ -1,0 +1,14 @@
+section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3em;
+}
+
+p + bar-rating {
+  margin-top: -25px;
+}
+
+#feedback-input {
+  padding-left: 35px;
+  padding-right: 35px;
+}
